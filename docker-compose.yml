@@ -1,0 +1,15 @@
+services:
+  db:
+    image: mysql
+    container_name: mysql_forum_api
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - forum_api:/var/lib/mysql
+    mem_limit: 512m
+
+
+volumes:
+  forum_api:
